@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet" type="text/css"/>
+    <title>Document</title>
+</head>
+<body>
+    <h2>Artikli</h2>
+
+    <div class="container">
+        <table id = "artikli">
+            <tr>
+                <th>
+                    Br
+                </th>
+
+                <th>
+                    Naziv
+                </th>
+
+                <th>
+                    Cena($)
+                </th>
+            </tr>
+        </table>
+
+        <form>
+            <label for="Naziv">Naziv:</label>
+            <input type="text" id="naziv" name="naziv" placeholder="Unesite naziv">
+            
+            <label for="Cena">Cena:</label>
+            <input type="number" id="Cena" name="Cena" placeholder="Unesite cenu">
+
+            <label for="Opis">Opis:</label>
+            <input type="text" id="Opis" name="Opis" placeholder="Unesite opis">
+
+            <input type="submit" value="Posalji upit" class = "dugmici"/>
+        </form>
+
+    </div>
+
+    <div class = "details">
+        <p>
+            Naziv: ...
+        </p>
+
+        <p>
+            Cena: ...
+        </p>
+
+        <p>
+            Opis: ...
+        </p>
+    </div>
+
+    <script src="Script.js"></script>
+</body>
+</html>

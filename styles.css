@@ -1,0 +1,48 @@
+body {
+  height: 100vh;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 550;
+  border: 2px solid black;
+  display: inline-block;
+}
+body h2 {
+  padding: 30px;
+  margin: 30px;
+  border-bottom: 2px solid black;
+}
+body .container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 50px;
+  gap: 100px;
+  padding-left: 30px;
+}
+body .container table {
+  width: 20%;
+  border: 1px solid black;
+  padding: 10px;
+}
+body .container table th, body .container table td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+body .container form {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  border: 1px solid black;
+}
+body .details {
+  width: 20%;
+  border: 1px solid black;
+  margin: 20px;
+  padding: 20px;
+}
+
+/*# sourceMappingURL=styles.css.map */
