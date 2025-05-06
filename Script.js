@@ -17,7 +17,24 @@ let nizArtikala = [nVidiaRTX,Ryzen7,Kingston]
 
 ispisiUTabeli(nizArtikala)
 
+const tabela = document.querySelector('#artikli');
+const ispisNaziv = document.querySelector('#ispisNaziv');
+const ispisCena = document.querySelector('#ispisCena');
+const ispisOpis = document.querySelector('#ispisOpis');
 
+tabela.addEventListener('click',(event) => {
+    const red = event.target.closest('tr');
+
+    if (red && red.rowIndex > 0){
+        const brojArtikla = red.querySelector('td').textContent;
+        const artikal = nizArtikala.find(a => a.broj == brojArtikla);
+            if(artikal) {
+                ispisNaziv.textContent = artikal.naziv;
+                ispisCena.textContent = artikal.cena;
+                ispisOpis.textContent = artikal.opis;
+            }
+    }
+});
 
 
 function ispisiUTabeli(nizArtikala) {
