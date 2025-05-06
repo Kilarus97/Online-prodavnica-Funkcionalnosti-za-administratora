@@ -14,7 +14,7 @@ let Kingston = new Artikal('Kingston_Fury',200,"DDR4 Memorija sa radnim taktom o
 
 let nizArtikala = [nVidiaRTX,Ryzen7,Kingston]
 
-ispisiUTabeli(nizArtikala)
+
 
 const tabela = document.querySelector('#artikli');
 const ispisNaziv = document.querySelector('#ispisNaziv');
@@ -53,6 +53,7 @@ submitBtn.addEventListener('click',function(event){
         let noviArtikal = new Artikal(naziv,cena,opis);
         nizArtikala.push(noviArtikal);
         
+        sacuvajArtikalUlokalStorage(nizArtikala);
         ispisiUTabeli(nizArtikala)
 })
         
@@ -79,3 +80,20 @@ function ispisiUTabeli(nizArtikala) {
     }
 
 }
+
+function sacuvajArtikalUlokalStorage(nizArtikala){
+    console.log("Čuvanje u localStorage:", nizArtikala);
+    localStorage.setItem("artikli",JSON.stringify(nizArtikala))
+}
+
+function ucitajArtikalIzLokalStorage(){
+    let sacuvaniPodaci = localStorage.getItem("artikli")
+
+    if(sacuvaniPodaci){
+        nizArtikala = JSON.parse(sacuvaniPodaci)
+        console.log(nizArtikala)
+        ispisiUTabeli(nizArtikala);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", ucitajArtikalIzLokalStorage);
