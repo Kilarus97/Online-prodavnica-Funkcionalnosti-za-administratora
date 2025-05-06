@@ -11,22 +11,27 @@
 
     <div class="container">
         <table id = "artikli">
-            <tr>
-                <th>
-                    Br
-                </th>
+            <thead>
+                <tr>
+                        <th>
+                            Br
+                        </th>
 
-                <th>
-                    Naziv
-                </th>
+                        <th>
+                            Naziv
+                        </th>
 
-                <th>
-                    Cena($)
-                </th>
-            </tr>
+                        <th>
+                            Cena($)
+                        </th>
+                </tr>
+            </thead>
+            <tbody id = "artikliBody">
+
+            </tbody>
         </table>
 
-        <form>
+        <form id = 'kreiraj'>
             <label for="Naziv">Naziv:</label>
             <input type="text" id="naziv" name="naziv" placeholder="Unesite naziv">
             
@@ -36,7 +41,7 @@
             <label for="Opis">Opis:</label>
             <input type="text" id="Opis" name="Opis" placeholder="Unesite opis">
 
-            <input type="submit" value="Posalji upit" class = "dugmici"/>
+            <input type="submit" value="Posalji upit" id = "dugmici"/>
         </form>
 
     </div>
